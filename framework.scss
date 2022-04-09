@@ -1,0 +1,27 @@
+:root{
+	--color-accent:	#f8f8f8;
+}
+
+body{
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+	position: relative;
+	overflow-x: hidden;
+}
+
+.iframe{
+	width: 1080px;
+	max-width: 1080px;
+	height: 780px;
+	max-height: 780px;
+	display: block;
+	margin: 0 auto;
+	padding: 0px;
+	z-index: 1;
+	position: relative;
+	background-color: var(--color-accent);
+}
