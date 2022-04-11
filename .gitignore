@@ -4,5 +4,4 @@ prepros.config
 node_modules
 *.scss
 framework.scss
-index.html
 app.js
