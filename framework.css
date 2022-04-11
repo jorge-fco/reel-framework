@@ -1,16 +1,78 @@
 :root {
-  --color-accent:	#f8f8f8;
+  --color-accent:	#E4E4E4;
+  --color-elements:	#111;
 }
 
 body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
+  line-height: 1.5;
+  background-color: #fff;
+  display: block;
   width: 100%;
+  border: 0px;
   margin: 0px;
   padding: 0px;
   position: relative;
   overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0px;
+  padding: 0px;
+}
+
+p {
+  margin: 0px;
+  padding: 0px;
+}
+
+button {
+  display: inline-block;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+      user-select: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  border-radius: 0.25rem;
+}
+
+img {
+  border: 0px;
+  margin: 0px;
+  padding: 0px;
+}
+
+.main {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  background-color: var(--color-elements);
 }
 
 .iframe {
@@ -23,5 +85,56 @@ body {
   padding: 0px;
   z-index: 1;
   position: relative;
+  overflow: hidden;
   background-color: var(--color-accent);
+}
+
+.iframe__image {
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  position: absolute;
+  overflow: hidden;
+  z-index: 2;
+}
+.iframe__image img {
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.window {
+  width: 940px;
+  height: 540px;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  overflow: hidden;
+  position: absolute;
+  background-color: var(--color-accent);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.window__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.window__column {
+  width: 50%;
+  position: relative;
 }
